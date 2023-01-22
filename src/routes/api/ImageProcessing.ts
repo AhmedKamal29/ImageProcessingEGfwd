@@ -5,8 +5,8 @@ import { FindImageInCach as search } from '../../modules/FindImage';
 import { ImageResize as resize } from '../../modules/ImageResize';
 const ImageProcessing = express.Router();
 
-let InputImage = './src/images/Images/img.jpg';
-let OutputImage = './src/images/Thumb/output.jpg';
+let InputImage = './src/assets/Images/img.jpg';
+let OutputImage = './src/assets/Thumb/output.jpg';
 
 ImageProcessing.get(
   '/resize',
@@ -18,8 +18,8 @@ ImageProcessing.get(
         Number(req.query.height)
       )
     ) {
-      InputImage = `./src/images/Images/${String(req.query.name)}.jpg`;
-      OutputImage = `./src/images/Thumb/${String(req.query.name)}_${
+      InputImage = `./src/assets/Images/${String(req.query.name)}.jpg`;
+      OutputImage = `./src/assets/Thumb/${String(req.query.name)}_${
         req.query.width
       }_${req.query.height}.jpg`;
 
@@ -35,14 +35,14 @@ ImageProcessing.get(
       }
       res.sendFile(
         MainDir.__dirname +
-          `/images/Thumb/${String(req.query.name)}_${req.query.width}_${
+          `/assets/Thumb/${String(req.query.name)}_${req.query.width}_${
             req.query.height
           }.jpg`
       );
     } else {
       res.sendFile(
         MainDir.__dirname +
-          `/images/Thumb/${String(req.query.name)}_${req.query.width}_${
+          `/assets/Thumb/${String(req.query.name)}_${req.query.width}_${
             req.query.height
           }.jpg`
       );
