@@ -55,6 +55,7 @@ http://localhost:3000/api/resize?name=palmtunnel&width=500&height=500
 ```
 
 <h1>File Structure</h1>
+![image](https://user-images.githubusercontent.com/53512084/213903917-33a43fb2-3505-4b0c-b1eb-b070043ab835.png)
 
 <h1>Technologies used</h1>
 
