@@ -47,6 +47,15 @@ npm run prettier
 npm run lint
 ```
 
+<h3>Image Processing: </h3>
+<p>After running the server add querry params to the url to begin using the image processing api. For Example use the following line in your browser</p>
+
+```bash
+http://localhost:3000/api/resize?name=palmtunnel&width=500&height=500
+```
+
+<h1>File Structure</h1>
+
 <h1>Technologies used</h1>
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
@@ -61,3 +70,6 @@ npm run lint
 
 - [How to write a good ReadMe file](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 - [Tech badges in the ReadMe file](https://github.com/Ileriayo/markdown-badges)
+- [Sharp documentation](https://sharp.pixelplumbing.com/api-resize)
+- [Blog about Sharp](https://blog.logrocket.com/processing-images-sharp-node-js/)
+- [File Structure documentation](https://nodejs.org/api/fs.html)
