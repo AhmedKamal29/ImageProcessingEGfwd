@@ -1,11 +1,12 @@
 import express from 'express';
 import { FindImageInCach as search } from '../../modules/FindImage';
 import { ImageResize as resize } from '../../modules/ImageResize';
+import { ExecuteMiddleware as validate } from '../../middleware/ImageParamsValid';
 import MainDir from '../../index';
 
 const ImageProcessing = express.Router();
 
-ImageProcessing.get('/resize', async (req, res): Promise<void> => {
+ImageProcessing.get('/resize', validate, async (req, res): Promise<void> => {
   try {
     let ImageName: string = String(req.query.name);
     let ImageWidth: number = Number(req.query.width);
