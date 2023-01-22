@@ -11,4 +11,4 @@ app.listen(port, () => {
   console.log(`server started at ${url}`);
 });
 
-export default { __dirname };
+export default { __dirname, app };

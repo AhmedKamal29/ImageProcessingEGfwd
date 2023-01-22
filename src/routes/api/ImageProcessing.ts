@@ -1,5 +1,4 @@
 import express, { Request, Response } from 'express';
-// import sharp from 'sharp';
 import MainDir from '../../index';
 import { FindImageInCach as search } from '../../modules/FindImage';
 import { ImageResize as resize } from '../../modules/ImageResize';
