@@ -1,5 +1,5 @@
 import QueryTestParameters from '../middleware/QueryTest';
-import imageResize from '../routes/api/Resize';
+import imageResize from '../routes/api/ImageProcessing';
 
 describe('Query Test Parameters ', () => {
   it('test number 1', () => {
