@@ -5,7 +5,7 @@ import { FindImageInCach as search } from '../../modules/FindImage';
 const imageProcess = express.Router();
 
 let inputFile = './src/images/input/img.jpg';
-let outputFile = './src/images/output/output.jpg';
+let outputFile = './src/images/Thumb/output.jpg';
 
 imageProcess.get(
   '/resize',
@@ -18,7 +18,7 @@ imageProcess.get(
       )
     ) {
       inputFile = `./src/images/input/${String(req.query.name)}.jpg`;
-      outputFile = `./src/images/output/${String(req.query.name)}_${
+      outputFile = `./src/images/Thumb/${String(req.query.name)}_${
         req.query.width
       }_${req.query.height}.jpg`;
       // try {
@@ -34,14 +34,14 @@ imageProcess.get(
       }
       res.sendFile(
         absPath.__dirname +
-          `/images/output/${String(req.query.name)}_${req.query.width}_${
+          `/images/Thumb/${String(req.query.name)}_${req.query.width}_${
             req.query.height
           }.jpg`
       );
     } else {
       res.sendFile(
         absPath.__dirname +
-          `/images/output/${String(req.query.name)}_${req.query.width}_${
+          `/images/Thumb/${String(req.query.name)}_${req.query.width}_${
             req.query.height
           }.jpg`
       );

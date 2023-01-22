@@ -2,22 +2,16 @@ import MainDir from '../index';
 import fs from 'fs';
 
 const FindImageInCach = (
-  name: string,
-  width: number,
-  height: number
+  ImageName: string,
+  ImageWidth: number,
+  ImageHeight: number
 ): boolean => {
-  const path =
-    MainDir.__dirname + `/images/output/${name}_${width}_${height}.jpg`;
-  try {
-    if (fs.existsSync(path)) {
-      console.log('found');
-      return true;
-    } else {
-      console.log('notfound');
-      return false;
-    }
-  } catch (error) {
-    console.log('errpr !');
+  const Imagepath =
+    MainDir.__dirname +
+    `/images/Thumb/${ImageName}_${ImageWidth}_${ImageHeight}.jpg`;
+  if (fs.existsSync(Imagepath)) {
+    return true;
+  } else {
     return false;
   }
 };
