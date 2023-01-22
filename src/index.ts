@@ -3,7 +3,7 @@ import routes from './routes/index';
 
 const app = express();
 const port: number = 3000;
-const url: string = `http://localhost:${port}/api/resize`;
+const url: string = `http://localhost:${port}/api`;
 
 app.use('/api', routes);
 
