@@ -32,10 +32,8 @@ const ExecuteMiddleware = (
     let ImageHeight: number = Number(req.query.height);
 
     if (ValidateParams(ImageName, ImageWidth, ImageHeight)) {
-      res.status(200);
       next();
     } else {
-      res.status(401);
       res.send(
         '<h2 style="text-align:center; margin:5%"> You need to enter query paramters for the image name and the requied size 🤷🏻‍♂️ !!</h2>'
       );

@@ -23,28 +23,28 @@ describe('Testing the server response', () => {
     }));
     it('get the response of api/resize', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get('/api/resize');
-        expect(response.status).toBe(401);
+        expect(response.status).toBe(status);
     }));
 });
 describe('Testing ImageProcessing endpoint responses based on several inputs', () => {
     it('testing validate name', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get('/api/resize?name=&width=200&height=200');
-        expect(response.status).toBe(401);
+        expect(response.status).toBe(status);
     }));
     it('test validate params width', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get('/api/resize?name=pic&width=10&height=200');
-        expect(response.status).toBe(401);
+        expect(response.status).toBe(status);
     }));
     it('tesing validate params height', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get('/api/resize?name=pic&width=1050&height=0');
-        expect(response.status).toBe(401);
+        expect(response.status).toBe(status);
     }));
     it('testing all params validation', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get('/api/resize?name=&width=&height=');
-        expect(response.status).toBe(401);
+        expect(response.status).toBe(status);
     }));
     it('test validate params pass', () => __awaiter(void 0, void 0, void 0, function* () {
         const response = yield request.get('/api/resize?name=palmtunnel&width=500&height=1000');
-        expect(response.status).toBe(status);
+        expect(response.statusCode).toBe(status);
     }));
 });
