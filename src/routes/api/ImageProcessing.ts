@@ -1,5 +1,5 @@
 import express from 'express';
-import { FindImageInCach as search } from '../../modules/FindImage';
+import { FindImageInCache as search } from '../../modules/FindImage';
 import { ImageResize as resize } from '../../modules/ImageResize';
 import { ExecuteMiddleware as validate } from '../../middleware/ImageParamsValid';
 import MainDir from '../../index';
