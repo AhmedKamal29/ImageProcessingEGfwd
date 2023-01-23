@@ -1,7 +1,7 @@
 import { ImageResize } from '../modules/ImageResize';
 
-let InputImage = './src/assets/Images/img.jpg';
-let OutputImage = './src/assets/Thumb/output.jpg';
+const InputImage = './src/assets/Images/img.jpg';
+const OutputImage = './src/assets/Thumb/output.jpg';
 
 describe('Image Module ', () => {
   it('test Resize 1', async () => {

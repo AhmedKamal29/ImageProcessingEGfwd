@@ -5,10 +5,12 @@ const ValidateParams = (
   ImageWidth: number,
   ImageHeight: number
 ): boolean => {
-  const isEmptyString = (str: string): boolean =>
-    typeof str === 'string' && str.trim().length == 0;
-  const isNumber = (num: number): boolean =>
-    typeof num === 'number' && !isNaN(num);
+  const isEmptyString = (str: string): boolean => {
+    return typeof str === 'string' && str.trim().length == 0;
+  };
+  const isNumber = (num: number): boolean => {
+    return typeof num === 'number' && !isNaN(num);
+  };
 
   if (
     isEmptyString(ImageName) ||
@@ -27,9 +29,9 @@ const ExecuteMiddleware = (
   next: Function
 ): void => {
   try {
-    let ImageName: string = String(req.query.name);
-    let ImageWidth: number = Number(req.query.width);
-    let ImageHeight: number = Number(req.query.height);
+    const ImageName: string = String(req.query.name);
+    const ImageWidth: number = Number(req.query.width);
+    const ImageHeight: number = Number(req.query.height);
 
     if (ValidateParams(ImageName, ImageWidth, ImageHeight)) {
       res.status(200);

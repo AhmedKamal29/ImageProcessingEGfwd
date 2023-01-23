@@ -8,7 +8,7 @@
     "start": "nodemon src/index.ts",
     "test": "npm run build && npm run jasmine",
     "jasmine": "jasmine",
-    "lint": "eslint src/index.ts",
+    "lint": "eslint . --ext .ts",
     "prettier": "prettier --config .prettierrc src/**/*.ts --write"
   },
   "keywords": [],
@@ -31,6 +31,7 @@
     "eslint-config-standard-with-typescript": "^31.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "jasmine": "^4.5.0",
     "jasmine-spec-reporter": "^7.0.0",

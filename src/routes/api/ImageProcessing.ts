@@ -11,13 +11,13 @@ ImageProcessing.get(
   validate,
   async (req: express.Request, res: express.Response): Promise<void> => {
     try {
-      let ImageName: string = String(req.query.name);
-      let ImageWidth: number = Number(req.query.width);
-      let ImageHeight: number = Number(req.query.height);
+      const ImageName: string = String(req.query.name);
+      const ImageWidth: number = Number(req.query.width);
+      const ImageHeight: number = Number(req.query.height);
 
       if (!search(ImageName, ImageWidth, ImageHeight)) {
-        let InputImage = `./src/assets/Images/${ImageName}.jpg`;
-        let OutputImage = `./src/assets/Thumb/${ImageName}_${ImageWidth}_${ImageHeight}.jpg`;
+        const InputImage = `./src/assets/Images/${ImageName}.jpg`;
+        const OutputImage = `./src/assets/Thumb/${ImageName}_${ImageWidth}_${ImageHeight}.jpg`;
 
         const ResizedImage = await resize(
           InputImage,
