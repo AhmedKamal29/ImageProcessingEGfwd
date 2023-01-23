@@ -16,8 +16,11 @@ ImageProcessing.get(
       const ImageHeight: number = Number(req.query.height);
 
       if (!search(ImageName, ImageWidth, ImageHeight)) {
-        const InputImage = `./src/assets/Images/${ImageName}.jpg`;
-        const OutputImage = `./src/assets/Thumb/${ImageName}_${ImageWidth}_${ImageHeight}.jpg`;
+        const InputImage =
+          MainDir.__dirname + `/assets/Images/${ImageName}.jpg`;
+        const OutputImage =
+          MainDir.__dirname +
+          `/assets/Thumb/${ImageName}_${ImageWidth}_${ImageHeight}.jpg`;
 
         const ResizedImage = await resize(
           InputImage,
