@@ -3,7 +3,7 @@ import ImageProcess from './api/ImageProcessing';
 
 const routes = express.Router();
 
-routes.get('/', (req, res) => {
+routes.get('/', (req: express.Request, res: express.Response) => {
   res.send(
     '<h2 style="text-align:center; margin:5%">Hello There 👋🏻 ! <br> To start Please add to the URL "/resize" followed by the query parameters </h2>'
   );
